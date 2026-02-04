@@ -419,14 +419,19 @@ export default function DailyPage() {
                 setTimeout(() => setShowCelebration(false), 2000)
               }
             }
-            setStep("walk")
-            setSelected(null)
+            window.location.href = '/'
           }}
           className="w-full py-4 px-8 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
         >
           <span className="text-2xl">✓</span>
           <span>Complete Day!</span>
           <span className="text-2xl">🎉</span>
+        </button>
+        <button
+          onClick={() => setStep('response')}
+          className="w-full py-3 px-6 bg-gray-500 hover:bg-gray-600 text-white rounded-lg font-semibold transition-all transform hover:scale-105"
+        >
+          ← Back
         </button>
       </div>
     </main>
